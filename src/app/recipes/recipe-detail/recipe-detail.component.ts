@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { NgForm} from '@angular/forms';
 import { Recipe } from "../recipe";
 
 @Component({
@@ -8,7 +8,10 @@ import { Recipe } from "../recipe";
 })
 export class RecipeDetailComponent implements OnInit {
   @Input() selectedRecipe: Recipe;
-
+  addRecipe(nf:NgForm){
+      console.log("Recipe is added");
+      console.log(nf.value);
+  }
   constructor() {}
 
   ngOnInit() {

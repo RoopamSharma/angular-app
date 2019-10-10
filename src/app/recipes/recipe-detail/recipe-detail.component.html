@@ -53,3 +53,9 @@
     <div *ngIf=!ingredients.valid> Ingredients cannot be blank!</div>
     <button type="submit" [disabled] = '!f.valid' class="btn btn-primary">Submit</button>
 </form>
+<button (click) = "loadRecipe()" class="btn btn-success">Load Data</button>
+<ul>
+    <li *ngFor="let recipe of loadedRecipes">
+        {{recipe.rname}}, {{recipe.email}}, {{recipe.price}}        
+    </li>
+</ul>
